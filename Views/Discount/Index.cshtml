@@ -1,0 +1,32 @@
+﻿@using Northwind.Models
+@model Discount
+
+<h1>Discount</h1>
+
+<form method="post" asp-action="Index">
+    <div asp-validation-summary="All" style="color:red;"></div>
+    <input type="hidden" name="DiscountID" value="@Model.DiscountID" />
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="@Model.DiscountID">DiscountID</label>
+            <input asp-for="@Model.DiscountID" class="form-control" placeholder="discountID" />
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="@Model.Code">Code</label>
+            <input asp-for="@Model.Code" class="form-control" placeholder="Code" />
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="@Model.ProductID">ProductID</label>
+            <input asp-for="@Model.ProductID" class="form-control" placeholder="ProductID" />
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="@Model.Title">Title</label>
+            <input asp-for="@Model.Title" class="form-control" placeholder="Title" />
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="@Model.Product">Product</label>
+            <input asp-for="@Model.Product" class="form-control" placeholder="Product" />
+        </div>
+    </div>
+
+</form>
